@@ -9,7 +9,6 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AllShow from "../pages/Home/AllShow";
 import Success from "../pages/Success";
-import PrivateRoute from "./Private/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -38,7 +37,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/success",
-          element: <PrivateRoute><Success/></PrivateRoute>
+          element: <Success/>
         },
         {
           path: "/error",
