@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import toast, { Toaster } from "react-hot-toast";
 import NavDrawer from "../components/Navbar/NavDrawer";
+import useUser from "../hooks/useUser";
 
 
 const Register = () => {
 
     const { createUser, googleLogin } = useAuth();
+    const { reload, setReload } = useUser();
 
     // update user data 
     const updateUser = (userData) => {
 
-        fetch("http://localhost:5000/user", {
+        fetch("https://show-hunt-backend.onrender.com/user", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -41,13 +43,14 @@ const Register = () => {
 
     }
 
-    // google register function 
+    // google login 
     const handleGoogle = () => {
         googleLogin()
             .then(data => {
-                const userData = { name: data.user.displayName, image: data.user.photoURL, email: data.user.email }
+                const userData = { name: data.user.displayName, email: data.user.email }
+                toast.success('Login Successful');
                 updateUser(userData);
-                // setReload(!reload);
+                setReload(!reload);
                 // navigate(navPath);
             })
     }
@@ -80,7 +83,7 @@ const Register = () => {
                         </form>
                         <p className="mt-4">Already have an account? Please <Link to="/login" className="text-purple-800 underline font-semibold">Login</Link> here</p>
                         <button className="py-4 mt-8 w-full rounded-md font-semibold bg-[var(--e)] outline-none ring-0 placeholder:text-slate-500 hover:bg-[var(--p)] transition-all duration-300 shadow-md flex items-center justify-center gap-4"
-                            onSubmit={handleGoogle}
+                            onClick={handleGoogle}
                         > Create with google</button>
                     </div>
                 </div>

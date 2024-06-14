@@ -8,7 +8,7 @@ const useAllShows = () => {
 
     useEffect(()=>{
 
-        fetch("http://localhost:5000/allShow")
+        fetch("https://show-hunt-backend.onrender.com/allShow")
         .then(res => res.json())
         .then(data => {
             setAllShow(data);

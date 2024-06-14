@@ -24,7 +24,7 @@ const Show = () => {
     useEffect(() => {
 
         // get event data 
-        fetch(`http://localhost:5000/event/${id}`)
+        fetch(`https://show-hunt-backend.onrender.com/event/${id}`)
             .then(res => res.json())
             .then(data => setEvent(data))
     }, [id])
@@ -46,7 +46,7 @@ const Show = () => {
 
             if (event.price == "Free") {
                 console.log("booking success")
-                fetch("http://localhost:5000/book", {
+                fetch("https://show-hunt-backend.onrender.com/book", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",
@@ -62,7 +62,7 @@ const Show = () => {
                 // payment function 
                 const stripe = await loadStripe('pk_test_51NEEQ0AmshkWyZ3emV25XGJZuZwUE6pVSGTcsETy8rZxZXPepW6keT32LTPZm3pZhwGAGMlLm8cfy7Q3LcbrjHuX00ulg6UFZL');
 
-                const res = await fetch("http://localhost:5000/create-checkout-session", {
+                const res = await fetch("https://show-hunt-backend.onrender.com/create-checkout-session", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

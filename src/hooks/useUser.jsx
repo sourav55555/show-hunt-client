@@ -12,7 +12,7 @@ const useUser = () => {
     const [loader, setLoader] = useState(true);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/user/${user?.email}`,{
+        fetch(`https://show-hunt-backend.onrender.com/user/${user?.email}`,{
             method: "GET",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("token")}`,

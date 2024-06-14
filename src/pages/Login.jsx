@@ -14,7 +14,7 @@ const Login = () => {
     // function for updating user data 
     const updateUser = (userData) => {
 
-        fetch("http://localhost:5000/user", {
+        fetch("https://show-hunt-backend.onrender.com/user", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

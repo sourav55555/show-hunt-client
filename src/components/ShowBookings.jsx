@@ -5,26 +5,7 @@ import List from '@mui/material/List';
 import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
 
-/* function SimpleDialog(props) {
-    const { open, onClose } = props;
 
-    return (
-        <Dialog open={open} onClose={onClose}>
-            <DialogTitle>Set backup account</DialogTitle>
-            <List sx={{ pt: 0 }}>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Tickets</th>
-                    </tr>
-                    {
-                        booking.map(data => <tr></tr>)
-                    }
-                </table>
-            </List>
-        </Dialog>
-    );
-} */
 
 export default function ShowBookings({ eventName }) {
     const [open, setOpen] = React.useState(false);
@@ -41,7 +22,7 @@ export default function ShowBookings({ eventName }) {
     const [booking, setBooking] = React.useState([]);
 
     React.useEffect(() => {
-        fetch(`http://localhost:5000/bookings/${eventName}`)
+        fetch(`https://show-hunt-backend.onrender.com/bookings/${eventName}`)
             .then(res => res.json())
             .then(data => setBooking(data.bookedUsers));
     }, [eventName])
