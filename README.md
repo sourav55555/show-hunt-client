@@ -1,8 +1,22 @@
-# React + Vite
+# Show-hunt client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+It's a ticket management web application for shows. It's created using react
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    cd your-repository
+    ```
+
+2. **Install dependencies:**
+    Since `node_modules` are not included in the repository, you need to install the dependencies:
+    ```bash
+    npm install
+    ```
