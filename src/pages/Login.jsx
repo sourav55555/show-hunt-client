@@ -54,9 +54,9 @@ const Login = () => {
         googleLogin()
             .then(data => {
                 const userData = { name: data.user.displayName, email: data.user.email }
+                toast.success('Login Successful');
                 updateUser(userData);
                 setReload(!reload);
-                toast.success('Login Successful');
                 // navigate(navPath);
             })
     }
@@ -94,7 +94,7 @@ const Login = () => {
 
 
                 <div className="w-1/2">
-                    <img src="/public/film-reel-icon-2GR8G5R.jpg" className="w-[90%] object-cover" alt="" />
+                    <img src="/film-reel-icon-2GR8G5R.jpg" className="w-[90%] object-cover" alt="" />
                 </div>
             </div>
             <Toaster />

@@ -87,7 +87,7 @@ const Register = () => {
 
 
                 <div className="md:w-1/2 ">
-                    <img src="/public/color-background-billboard-banner-with-film-reel-vector-15899842.jpg" className="w-[90%] object-cover rounded-xl mx-auto md:m-0" alt="" />
+                    <img src="/color-background-billboard-banner-with-film-reel-vector-15899842.jpg" className="w-[90%] object-cover rounded-xl mx-auto md:m-0" alt="" />
                 </div>
             </div>
             <Toaster />
