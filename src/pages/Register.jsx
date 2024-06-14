@@ -22,7 +22,7 @@ const Register = () => {
             body: JSON.stringify(userData)
         })
             .then(res => res.json())
-            .then(data => toast.success('Registration Successful'));
+            .then(data => {toast.success('Registration Successful');setReload(!reload);});
     }
 
     // create user function 
@@ -48,10 +48,8 @@ const Register = () => {
         googleLogin()
             .then(data => {
                 const userData = { name: data.user.displayName, email: data.user.email }
-                toast.success('Login Successful');
                 updateUser(userData);
-                setReload(!reload);
-                // navigate(navPath);
+
             })
     }
 
