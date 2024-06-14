@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --p: #8ef6e4;
+    --s: rgb(237, 177, 241);
+    --e: rgb(213, 155, 246);
+    --ex: #9896f1;
+}
+
+.font-1 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+.font-2 {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-style: normal;
+  }

@@ -1,0 +1,8 @@
+.category-bg {
+  background: rgb(236, 239, 251);
+  background: linear-gradient(
+    183deg,
+    rgba(236, 239, 251, 0) 0%,
+    rgba(142, 246, 228, 1) 100%
+  );
+}
